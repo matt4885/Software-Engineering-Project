@@ -15,5 +15,7 @@ public class Project {
 	public static void main(String[] args) {
 		System.out.print("Hello, world!");
 		System.out.println("Testing a change.");
+		for (int i = 0; i < 10; i++)
+			System.out.println(i);
 	}
 }
