@@ -12,10 +12,23 @@
 
 
 public class Project {
+
+	private static void looper() {
+		int i;
+		for (i = 0; i < 100; i++)
+			if (i % 3 == 0 &&  i % 5 == 0)
+				System.out.println("Fizzbuzz");
+			if (i % 3 == 0)
+				System.out.println("Fizz");
+			if (i % 5 == 0)
+				System.out.println("Buzz");
+	}
+
 	public static void main(String[] args) {
 		System.out.print("Hello, world!");
 		System.out.println("Testing a change.");
-		for (int i = 0; i < 10; i++)
-			System.out.println(i);
+		looper();
+
+		
 	}
 }
