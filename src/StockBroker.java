@@ -3,7 +3,6 @@
  *
  */
 import javafx.application.Application;
-import javafx.geometry.HPos;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -67,7 +66,7 @@ public class StockBroker extends Application{
 			password = passwordField.getText();
 			login = checkLogin(username, password);
 			if (login == true)
-				System.out.println("Correct login,");
+				System.out.println("Correct login");
 			else
 				System.out.println("Incorrect login");
 				System.out.println(username);
