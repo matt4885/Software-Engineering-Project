@@ -96,6 +96,11 @@ public class CurrentSummary1 extends javax.swing.JInternalFrame {
         textStockQuerry.setText("Stock Symbol");
 
         buttonSearch.setText("Search");
+        buttonSearch.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonSearchActionPerformed(evt);
+            }
+        });
 
         labelListOfResults.setText("List of Customers With Stock");
 
@@ -152,7 +157,7 @@ public class CurrentSummary1 extends javax.swing.JInternalFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(100, Short.MAX_VALUE)
+                .addGap(29, 29, 29)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelNumberCustomers)
                     .addComponent(labelCashBalances)
@@ -177,7 +182,7 @@ public class CurrentSummary1 extends javax.swing.JInternalFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(buttonToMainMenu)
                     .addComponent(buttonCustomerPortfolio))
-                .addContainerGap(100, Short.MAX_VALUE))
+                .addContainerGap(175, Short.MAX_VALUE))
         );
 
         pack();
@@ -194,6 +199,10 @@ public class CurrentSummary1 extends javax.swing.JInternalFrame {
     private void buttonCustomerPortfolioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCustomerPortfolioActionPerformed
         cl.show(homeContainer, "Customer Portfolio");
     }//GEN-LAST:event_buttonCustomerPortfolioActionPerformed
+
+    private void buttonSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonSearchActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_buttonSearchActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

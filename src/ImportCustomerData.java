@@ -31,6 +31,8 @@ public class ImportCustomerData extends javax.swing.JPanel {
     private void initComponents() {
 
         buttonMainMenu = new javax.swing.JButton();
+        labelImportCustomerData = new javax.swing.JLabel();
+        jFileChooser1 = new javax.swing.JFileChooser();
 
         buttonMainMenu.setText("Main Menu");
         buttonMainMenu.addActionListener(new java.awt.event.ActionListener() {
@@ -39,21 +41,38 @@ public class ImportCustomerData extends javax.swing.JPanel {
             }
         });
 
+        labelImportCustomerData.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        labelImportCustomerData.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelImportCustomerData.setText("Import Customer Data - Choose File to Import");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(475, Short.MAX_VALUE)
+                .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(buttonMainMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(153, 153, 153))
+                .addGap(113, 113, 113))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(122, 122, 122)
+                        .addComponent(jFileChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, 772, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(245, 245, 245)
+                        .addComponent(labelImportCustomerData, javax.swing.GroupLayout.PREFERRED_SIZE, 560, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(99, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(332, Short.MAX_VALUE)
+                .addGap(43, 43, 43)
+                .addComponent(labelImportCustomerData)
+                .addGap(35, 35, 35)
+                .addComponent(jFileChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, 321, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 151, Short.MAX_VALUE)
                 .addComponent(buttonMainMenu)
-                .addGap(111, 111, 111))
+                .addGap(44, 44, 44))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -64,5 +83,7 @@ public class ImportCustomerData extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton buttonMainMenu;
+    private javax.swing.JFileChooser jFileChooser1;
+    private javax.swing.JLabel labelImportCustomerData;
     // End of variables declaration//GEN-END:variables
 }

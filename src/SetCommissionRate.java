@@ -14,11 +14,34 @@ import static stockbroker9.Driver.homeContainer;
  */
 public class SetCommissionRate extends javax.swing.JPanel {
 
+    private double commissionRate = .04;
+
     /**
      * Creates new form SetCommissionRate
      */
     public SetCommissionRate() {
         initComponents();
+    }
+
+    public double toDouble(String input) {
+        input = input.trim();
+        double output = Double.parseDouble(input);
+        return output;
+    }
+
+    public String setCommissionRateText() {
+        String output;
+        output = "Current Commission Rate is " + commissionRate +"%";
+        return output;
+    }
+    public void refreshLabelCommissionRate(){
+        labelCurrentRate.setText(setCommissionRateText());
+    }
+
+    public String getDesiredRate() {
+        String output;
+        output = "4";
+        return output;
     }
 
     /**
@@ -29,40 +52,78 @@ public class SetCommissionRate extends javax.swing.JPanel {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+        java.awt.GridBagConstraints gridBagConstraints;
 
+        jInternalFrame1 = new javax.swing.JInternalFrame();
+        labelCurrentRate = new javax.swing.JLabel();
         buttonMainMenu = new javax.swing.JButton();
+        labelSetComissionRate = new javax.swing.JLabel();
+        comboBoxCommissionRate = new javax.swing.JComboBox();
 
+        setLayout(new java.awt.GridBagLayout());
+
+        jInternalFrame1.setVisible(true);
+        jInternalFrame1.getContentPane().setLayout(null);
+
+        labelCurrentRate.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        labelCurrentRate.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelCurrentRate.setText(setCommissionRateText());
+        jInternalFrame1.getContentPane().add(labelCurrentRate);
+        labelCurrentRate.setBounds(12, 79, 335, 57);
+        labelCurrentRate.getAccessibleContext().setAccessibleName(setCommissionRateText());
+
+        buttonMainMenu.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         buttonMainMenu.setText("Main Menu");
         buttonMainMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonMainMenuActionPerformed(evt);
             }
         });
+        jInternalFrame1.getContentPane().add(buttonMainMenu);
+        buttonMainMenu.setBounds(12, 289, 335, 59);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(434, Short.MAX_VALUE)
-                .addComponent(buttonMainMenu)
-                .addGap(231, 231, 231))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(310, Short.MAX_VALUE)
-                .addComponent(buttonMainMenu)
-                .addGap(138, 138, 138))
-        );
+        labelSetComissionRate.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        labelSetComissionRate.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelSetComissionRate.setText("Set Commission Rate");
+        jInternalFrame1.getContentPane().add(labelSetComissionRate);
+        labelSetComissionRate.setBounds(12, 13, 335, 59);
+
+        comboBoxCommissionRate.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        comboBoxCommissionRate.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "0", ".5", "1.0", "1.5", "2.0", "2.5", "3.0", "3.5", "4.0", "4.5", "5.0" }));
+        comboBoxCommissionRate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                comboBoxCommissionRateActionPerformed(evt);
+            }
+        });
+        jInternalFrame1.getContentPane().add(comboBoxCommissionRate);
+        comboBoxCommissionRate.setBounds(143, 182, 73, 59);
+
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.ipadx = 337;
+        gridBagConstraints.ipady = 357;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(42, 204, 194, 181);
+        add(jInternalFrame1, gridBagConstraints);
     }// </editor-fold>//GEN-END:initComponents
 
     private void buttonMainMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonMainMenuActionPerformed
         cl.show(homeContainer, "Main Menu");
     }//GEN-LAST:event_buttonMainMenuActionPerformed
 
+    private void comboBoxCommissionRateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboBoxCommissionRateActionPerformed
+        String commRate = (String) comboBoxCommissionRate.getSelectedItem();
+        commissionRate=toDouble(commRate);
+        labelCurrentRate.setText(setCommissionRateText());       
+    }//GEN-LAST:event_comboBoxCommissionRateActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton buttonMainMenu;
+    private javax.swing.JComboBox comboBoxCommissionRate;
+    private javax.swing.JInternalFrame jInternalFrame1;
+    private javax.swing.JLabel labelCurrentRate;
+    private javax.swing.JLabel labelSetComissionRate;
     // End of variables declaration//GEN-END:variables
 }
