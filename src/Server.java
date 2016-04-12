@@ -1,22 +1,9 @@
 /*
  * UNIVERSITY OF NORTH FLORIDA COMPUTER SCIENCE
- * CNT 4504 - COMPUTER NETWORKS AND DISTRIBUTED PROCESSING
- * Project 1/2
- * Group 5
- * Date Started:  05/14/2015
- * Date Finished: 05/20/2015
  * Group Machines Used
  * Client: 192.168.100.109
  * Server: 192.168.100.110
  * Port: 1234
- * ********************
- * * Nicholas Hecht   *
- * * Matthew Kempey   *
- * * Casey Dotson     *
- * * Braden Weaver    *
- * * Michael Williams *
- * ********************
- *
  * Other Notes:
  * args[0] = PORT NUMBER
  * args[1] = SERVER TYPE (0 = ITERATIVE, 1 = CONCURRENT)
